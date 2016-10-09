@@ -9,7 +9,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'NAME': 'lendmybook',
         'USER': 'lendmybook',
-        'PASSWORD': 'L3ndMyBook.DB',
+        'PASSWORD': '123456',
         'HOST': 'localhost',
         'PORT': '5432'
     }
