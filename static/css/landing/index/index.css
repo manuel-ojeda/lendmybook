@@ -1,0 +1,62 @@
+#banner {
+    position: relative;
+    height:300px;
+    width:100%;
+    overflow: hidden;
+}
+
+#bgvid {
+    position: absolute;
+    top: 0;
+    left: 0;
+    min-width: 100%;
+    min-height: 100%;
+    height:auto;
+    width:auto;
+    z-index: -100;
+}
+
+#welcome-message {
+    top: 100px;
+    padding-left: 10%;
+    padding-right: 10%;
+    font-size: 32px;
+    color: white;
+    text-align: center;
+    bottom: 800px;
+}
+
+#welcome-message h1 {
+    font-size: 64px;
+}
+
+#welcome-message p {
+    font-size: 18px;
+    color: white;
+    text-align: center;
+    top: auto;
+
+}
+
+#how-does-it-works {
+    top: 200px;
+}
+
+#genders {
+    top: 800px;
+}
+
+.book-cover {
+    width: 200px;
+    height: 75px;
+    height: auto;
+    padding: 2px;
+}
+
+.book-cover:hover {
+    padding: 0px;
+}
+
+#catalog {
+    top: 200px;
+}
