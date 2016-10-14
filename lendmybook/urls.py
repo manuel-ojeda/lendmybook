@@ -20,5 +20,6 @@ from django.contrib import admin
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^', include('modules.landing.url', namespace="landing")),
+    url(r'^books/', include('modules.books.url', namespace="books")),
 ]
 

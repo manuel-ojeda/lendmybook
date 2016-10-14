@@ -1,7 +1,6 @@
 from django.db import models
 from django.contrib.auth.models import AbstractBaseUser, BaseUserManager
 from django.contrib.auth.models import PermissionsMixin
-from modules.books.models import Book
 
 class UserManager(BaseUserManager, models.Manager):
 
@@ -31,12 +30,13 @@ class UserManager(BaseUserManager, models.Manager):
 
 class User(AbstractBaseUser, PermissionsMixin, models.Model):
 
-    id = models.AutoField(primary_key=True)
-    name = models.CharField(max_length=20)
-    lastname = models.CharField(max_length=20)
+    id_user = models.AutoField(primary_key=True)
+    id_facebook = models.CharField(primary_key=True,max_length=40)
+    first_name = models.CharField(max_length=20)
+    last_name = models.CharField(max_length=20)
     username = models.CharField(max_length=20,unique=True)
     email = models.EmailField(unique=True)
-    age = models.IntegerField(null=True, blank=True)
+    birth_date = models.DateField(null=False, blank=False)
     
     objects = UserManager()
 
@@ -44,10 +44,10 @@ class User(AbstractBaseUser, PermissionsMixin, models.Model):
     is_staff = models.BooleanField(default=False)
 
     USERNAME_FIELD = 'username'
-    REQUIRED_FIELDS = ['email']
+    REQUIRED_FIELDS = ['email','birth_date']
 
     class Meta:
-        unique_together = ('id',)
+        unique_together = ('id_user',)
 
     def get_short_name(self):
         return self.username

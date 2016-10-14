@@ -6,66 +6,68 @@
 
    <div class="well">
     <ul class="nav nav-tabs">
-      <li class="active"><a href="#home" data-toggle="tab">Profile</a></li>
-      <li><a href="#profile" data-toggle="tab">Other things</a></li>
+      <li class="active"><a href="#home" data-toggle="tab">Perfil</a></li>
+      <li><a href="#profile" data-toggle="tab">Notificaciones</a></li>
     </ul>
     <div id="myTabContent" class="tab-content">
       <div class="tab-pane active in" id="home">
         <form method="POST" action="{% url 'users:edit' %}" id="tab">{% csrf_token %}
-        	<label>Username</label>
+            <label>Usuario</label>
             <input type="text" value="{{user.username}}" name="username" class="input-xlarge">
             <br>
-            <label>Name</label>
-            <input type="text" value="{{user.name}}" name="name" class="input-xlarge" >
+            <label>Nombre</label>
+            <input type="text" value="{{user.first_name}}" name="first_name" class="input-xlarge" >
             <br>
-            <label>Last Name</label>
-            <input type="text" value="{{user.lastname}}" name="lastname" class="input-xlarge" >
+            <label>Apellidos</label>
+            <input type="text" value="{{user.last_name}}" name="last_name" class="input-xlarge" >
             <br>
             <label>Email</label>
             <input type="text" value="{{user.email}}" name="email" class="input-xlarge">
             <br>
-           <label>Age</label>
-            <input type="text" value="{{user.age}}" name="age" class="input-xlarge">
+           <label>Fecha de nacimiento</label>
+            <input type="text" value="{{user.birth_date}}" name="age" class="input-xlarge">
             <br>
-            {% if not user.events or user.events.Events == None %}
-            <label >Events</label>
-            <span>You don´t have any events</span>
+
+            <!-- {% if not user.books or user.books.Books == None %}
+            <label >Tus libros</label>
+            <span>No has publicado libros aún</span>
             {% else %}
-            <label>Events</label>
-            <input type="text" value="{{user.events}}" class="input-xlarge">
-			{% endif %}
-			<br>
-            {% if not user.band%}
+            <label>Biblioteca</label>
+            <input type="text" value="{{user.books}}" class="input-xlarge">
+            {% endif %}
+            <br> -->
+            <!-- HERE YOU SHOULD ADD THE NOTIFICATIONS PART
+            {% if not user.notifications%}
             <label >Band</label>
             <span>You aren´t member of a band</span>
             {% else %}
             <label>Band</label>
             <input type="text" value="{{user.band}}" class="input-xlarge">
-			{% endif %}
-			<br>
-			{% if not user.bar%}
+            {% endif %}
+            <br>
+            {% if not user.bar%}
                 <label >Bar</label>
                 <span>You aren´t owner of a bar</span>
             {% else %}
                 <label>Bar</label>
                 <span>{{ user.bar.name }}</span>
                 <input type="text" value="{{user.bar}}" class="input-xlarge">
-			{% endif %}
-			
-           <button type="submit">Update</button>
+            {% endif %}
+            -->
+           <button type="submit">Terminado</button>
         </form>
 
         {% if user.bar %}
-            <a href="{% url 'bars:profile' %}" class="btn btn-primary">Go to my bar</a>
+            <a href="{% url 'books:user_catalog' %}" class="btn btn-primary">Mi Catálogo</a>
         {% else %}
-            <a href="{% url 'bars:create' %}" class="btn btn-primary">Create new bar</a>
+            <a href="{% url 'books:add' %}" class="btn btn-primary">Publicar libro</a>
         {% endif %}
 
       </div>
       <div class="tab-pane fade" id="profile">
-    	<form id="tab2">
-        	
-    	</form>
+        <form id="tab2">
+            
+        </form>
       </div>
   </div>
 {% endblock content %}

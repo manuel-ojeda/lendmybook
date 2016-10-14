@@ -29,13 +29,16 @@ DJANGO_APPS = [
 LOCAL_APPS = [
     'modules.books',
     'modules.users',
+    'modules.books_preferences',
+    'modules.user_preferences',
+    'modules.landing',
 ]
 
 THIRD_PARTY_APPS = [
 
 ]
 
-INSTALLED_APPS = DJANGO_APPS + LOCAL_APPS + THIRD_PARTY_APPS
+INSTALLED_APPS = DJANGO_APPS+LOCAL_APPS+THIRD_PARTY_APPS
 
 MIDDLEWARE_CLASSES = [
     'django.middleware.security.SecurityMiddleware',
@@ -86,17 +89,3 @@ AUTH_PASSWORD_VALIDATORS = [
         'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
     },
 ]
-
-
-# Internationalization
-# https://docs.djangoproject.com/en/1.9/topics/i18n/
-
-LANGUAGE_CODE = 'en-us'
-
-TIME_ZONE = 'UTC'
-
-USE_I18N = True
-
-USE_L10N = True
-
-USE_TZ = True

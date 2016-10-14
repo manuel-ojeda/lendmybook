@@ -10,7 +10,7 @@ def index(request):
 def profile(request):
 	if request.user.is_authenticated():
 
-		user = User.objects.get(id=request.user.id)
+		user = User.objects.get(id=request.user.id_user)
 		return render(request, 'users/profile.html', {'user':user})
 	else:
 		return redirect('/')
@@ -19,17 +19,12 @@ def edit(request):
 	if request.method == "POST":
 		if request.user.is_authenticated():
 
-			user = User.objects.get(id=request.user.id)
+			user = User.objects.get(id=request.user.id_user)
 			user.username = request.POST["username"]
-			user.name = request.POST["name"]
-			user.lastname = request.POST["lastname"]
+			user.first_name = request.POST["fist_name"]
+			user.last_name = request.POST["last_name"]
 			user.email = request.POST["email"]
-
-			if request.POST["age"] != 'None':
-				user.age = int(request.POST["age"])
-			else:
-				user.age = None
-
+			user.birth_date = request.POST["birth_date"]
 			user.save()
 
 			return redirect('/profile/')
@@ -45,10 +40,14 @@ def userlogin(request):
 
 			if user_register.is_valid():
 				User.objects.create_user(
-					username= user_register.cleaned_data['username'],
+					username = user_register.cleaned_data['username'],
+					first_name = user_register.cleaned_data['first_name'],
+					last_name = user_register.cleaned_data['last_name'],
 					email = user_register.cleaned_data['email'],
-					password = user_register.cleaned_data['password']
+					password = user_register.cleaned_data['password'],
+					birth_date = user_register.cleaned_data['birth_date'],
 				)
+
 				LogIn(
 					request, 
 					user_register.cleaned_data['username'], 
@@ -60,12 +59,13 @@ def userlogin(request):
 			login_form = LoginForm(request.POST)
 
 			if login_form.is_valid():
-				LogIn(
-					request, 
+				user = authenticate(
 					login_form.cleaned_data['username'], 
-					login_form.cleaned_data['password']
+					login_form.cleaned_data['password'],
 				)
-				return redirect('/')
+				if user is not None:
+					login(request, user)
+					return redirect('/')
 				
 	else:
 		user_register = UserRegisterForm()
