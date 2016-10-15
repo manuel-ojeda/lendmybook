@@ -6,7 +6,11 @@ DELEGATIONS_CHOICES = (('ALO',"Álvaro Obregón"),('AZC',"Azcapotzalco"),('BEJ',
 
 class UserPreferencesForm(forms.Form):
 
-	zones = forms.MultipleChoiceField(required=False,
+	city = forms.CharField(required=True,
+		max_length=30,
+		widget=forms.TextInput())
+
+	zones = forms.MultipleChoiceField(required=True,
 		widget=forms.CheckboxSelectMultiple,
 		choices = DELEGATIONS_CHOICES)
 

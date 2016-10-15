@@ -10,11 +10,20 @@ class Book(models.Model):
 	title = models.CharField(max_length=70)
 	author = models.CharField(max_length=200)
 	description = models.TextField()
-	edition = models.TextField()
+	edition = models.CharField(max_length=20)
 	cover_image = models.ImageField(upload_to='../../media/cover_images/')
 	isbn = models.CharField(max_length=13)
 	book_images = models.ImageField(upload_to='../../media/book_images/')
 
+
+
+class SearchBook(models.Model):	
+
+	id_temporal = models.AutoField(primary_key=True)
+	title = models.CharField(max_length=70)
+	author = models.CharField(max_length=200)
+	
+	initialSearch = models.Manager()
 
 """
 class ShortBook(models.Model):

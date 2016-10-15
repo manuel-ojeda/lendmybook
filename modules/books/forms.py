@@ -10,13 +10,18 @@ class BookRegister(forms.Form):
 	title = forms.CharField(max_length=70)
 	author = forms.CharField(max_length=200)
 	description = forms.CharField(widget=forms.Textarea)
-	edition = forms.CharField(widget=forms.Textarea)
+	edition = forms.CharField(max_length=20)
 	cover_image = forms.ImageField()
 	book_images = forms.ImageField()	
 	categories = forms.MultipleChoiceField(required=True, widget=forms.CheckboxSelectMultiple, choices = CATEGORIES_CHOICES)
 	action_tags = forms.MultipleChoiceField(required=False, widget=forms.CheckboxSelectMultiple, choices = ACTIONS_CHOICES)	
 	status = forms.BooleanField()	
 
+
+class SearchBook(forms.Form):
+
+	title = forms.CharField(max_length=70)
+	author = forms.CharField(max_length=200)
 
 """ HERE WE SHOULD OBTAIN INITIAL VALUES FROM FUNCTIONS
 class InitialBookValues(forms.Form):

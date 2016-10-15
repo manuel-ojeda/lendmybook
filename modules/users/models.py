@@ -32,11 +32,13 @@ class User(AbstractBaseUser, PermissionsMixin, models.Model):
 
     id_user = models.AutoField(primary_key=True)
     id_facebook = models.CharField(primary_key=True,max_length=40)
+    username = models.CharField(max_length=20,unique=True)
     first_name = models.CharField(max_length=20)
     last_name = models.CharField(max_length=20)
-    username = models.CharField(max_length=20,unique=True)
     email = models.EmailField(unique=True)
+    phone_number = models.CharField(max_length=15,unique=True)
     birth_date = models.DateField(null=False, blank=False)
+    description = models.TextField()
     
     objects = UserManager()
 
@@ -47,7 +49,7 @@ class User(AbstractBaseUser, PermissionsMixin, models.Model):
     REQUIRED_FIELDS = ['email','birth_date']
 
     class Meta:
-        unique_together = ('id_user',)
+        unique_together = ('id_user','email')
 
     def get_short_name(self):
         return self.username

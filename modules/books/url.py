@@ -5,4 +5,5 @@ urlpatterns = [
 
 	url(r'^postnew/$', postNewBook, name="postnew"),
 	url(r'^profile/$', profile, name="profile"),
+	#url(r'^getnew/$', getNewBook, name="getnew"),
 ]

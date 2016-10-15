@@ -5,38 +5,37 @@ class UserRegisterForm(forms.Form):
 
 	username = forms.CharField(
 		max_length=30,
-		widget =  forms.TextInput(attrs={
+		widget = forms.TextInput(attrs={
 		'class': 'form-control',
 		'placeholder': 'Ingresa un nombre de usuario'
 	}))
 
 	first_name = forms.CharField(
 		max_length=30,
-		widget =  forms.TextInput(attrs={
+		widget = forms.TextInput(attrs={
 		'class': 'form-control',
 		'placeholder': 'Ingresa tu nombre'
 	}))
 
 	last_name = forms.CharField(
 		max_length=30,
-		widget =  forms.TextInput(attrs={
+		widget = forms.TextInput(attrs={
 		'class': 'form-control',
 		'placeholder': 'Ingresa tus apellidos'
 	}))
 
 	email = forms.CharField(
 		max_length=30,
-		widget =  forms.TextInput(attrs={
+		widget = forms.TextInput(attrs={
 		'type': 'email',
 		'placeholder': 'Ingresa tu email'
 	}))
 
-	password = forms.CharField(
-		max_length=30,
-		widget =  forms.TextInput(attrs={
+	phone_number = forms.CharField(
+		max_length=15,
+		widget = forms.TextInput(attrs={
 		'class': 'form-control',
-		'type': 'password',
-		'placeholder': 'Ingresa una contraseña'
+		'placeholder': 'Numero de telefono'
 	}))
 
 	birth_date = forms.DateField(
@@ -45,10 +44,16 @@ class UserRegisterForm(forms.Form):
 		'placeholder' : 'Ingresa tu fecha de nacimiento en aaaa/mm/dd'
 	}))
 
+	description = forms.CharField(
+		widget = forms.Textarea(atts={
+		'class':'form-control',
+		'placeholder': 'Ingresa una breve descripcion'
+	}))
+
 class LoginForm(forms.Form):
 	username = forms.CharField(
 		max_length=30,
-		widget=forms.TextInput(attrs={
+		widget= forms.TextInput(attrs={
 			'class': 'form-control',
 			'placeholder': 'Ingresa tu usuario'
 		}))

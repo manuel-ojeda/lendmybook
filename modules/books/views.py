@@ -1,7 +1,8 @@
 from django.shortcuts import render, redirect
 from .models import Book
 from modules.users.models import User
-from .forms import BookRegister
+from .forms import BookRegister, SearchBook
+from .functions import getBookData
 
 def postNewBook(request):
 
@@ -25,7 +26,7 @@ def postNewBook(request):
 
 			user.book = book
 			user.save()
-			return redirect('books/postnew/?=created=OK')
+			return redirect('/')
 	return render(request, 'books/new.html', {'new_book':new_book})
 
 	#return redirect('/')
@@ -35,3 +36,24 @@ def profile(request):
 	book = Book.objects.get(id=request.user.book.id)
 	return render(request,'books/profile.html',{'book':book})
 	#return redirect('/')
+
+"""
+def getNewBook(request):
+	look_book = SearchBook()
+	if request.method == 'POST':
+		look_book = SearchBook(request.POST,request.FILES)
+		if look_book.is_valid():
+
+			searchBook = initialSearch.objects.create(
+				title = new_book.cleaned_data['title'],
+				author = new_book.cleaned_data['author'],
+				)
+
+			searchBook.save()
+
+		searchTitle = searchBook.title
+		searchAuthor = searchBook.author
+		results = getBookData(searchTitle,searchAuthor)
+		for option in results:
+	
+"""		

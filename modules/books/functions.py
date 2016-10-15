@@ -65,8 +65,4 @@ def getBookData(title,author):
 		option = [bookTitle,bookAuthor, bookDescription, bookCover,bookCover2,bookCategories]
 		allOptions.append(option)
 
-	"""
-	for j in allOptions:
-		print(j)
-		print("\n\n")
-	"""
+	return allOptions
