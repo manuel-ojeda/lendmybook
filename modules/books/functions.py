@@ -6,6 +6,9 @@ cover image, and possibly categories
 
 import requests
 
+def otherAPI(code):
+	requesturl = ""
+
 def getBookData(title,author):
 	titlevar = title
 	authorvar = author
@@ -17,7 +20,7 @@ def getBookData(title,author):
 	requieredFields = "&fields=" + items
 	apiKey = "AIzaSyAKi3MX1SA_B6mw4iPGv0jN58Wn-xakQk4"
 	
-	if authorvar == "no conozco el autor":
+	if authorvar == "":
 		queryFields = "&q=intitle:" + titlevar +"&"
 	else:
 		queryFields = "&q=intitle:" + titlevar + ",inauthor:" + authorvar +"&"
@@ -62,7 +65,10 @@ def getBookData(title,author):
 		except:
 			bookCategories = None
 
-		option = [bookTitle,bookAuthor, bookDescription, bookCover,bookCover2,bookCategories]
-		allOptions.append(option)
+		if bookCover != None:
+
+			option = [bookTitle,bookAuthor, bookDescription, bookCover,bookCover2,bookCategories]
+			allOptions.append(option)
+
 
 	return allOptions

@@ -1,7 +1,7 @@
 from django.shortcuts import render, redirect
 from .models import Book
 from modules.users.models import User
-from .forms import BookRegister, SearchBook
+from .forms import BookRegister
 from .functions import getBookData
 
 def postNewBook(request):

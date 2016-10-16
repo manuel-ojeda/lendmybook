@@ -31,14 +31,14 @@ class UserManager(BaseUserManager, models.Manager):
 class User(AbstractBaseUser, PermissionsMixin, models.Model):
 
     id_user = models.AutoField(primary_key=True)
-    id_facebook = models.CharField(primary_key=True,max_length=40)
-    username = models.CharField(max_length=20,unique=True)
-    first_name = models.CharField(max_length=20)
-    last_name = models.CharField(max_length=20)
+    id_facebook = models.CharField(primary_key=True,max_length=40,default="")
+    username = models.CharField(max_length=20,unique=True,default="")
+    first_name = models.CharField(max_length=20,default="")
+    last_name = models.CharField(max_length=20,default="")
     email = models.EmailField(unique=True)
-    phone_number = models.CharField(max_length=15,unique=True)
-    birth_date = models.DateField(null=False, blank=False)
-    description = models.TextField()
+    phone_number = models.CharField(max_length=15,unique=True,default="")
+    birth_date = models.DateField(null=False, blank=False,default="1998-01-01")
+    description = models.TextField(default="")
     
     objects = UserManager()
 

@@ -28,10 +28,13 @@ DJANGO_APPS = [
 
 LOCAL_APPS = [
     'modules.books',
+    'modules.base_books',
+    'modules.events',
     'modules.users',
     'modules.books_preferences',
     'modules.user_preferences',
     'modules.landing',
+
 ]
 
 THIRD_PARTY_APPS = [
