@@ -60,8 +60,4 @@ class Migration(migrations.Migration):
             model_name='user',
             name='name',
         ),
-        migrations.AlterUniqueTogether(
-            name='user',
-            unique_together=set([('id_user','email',)]),
-        ),
     ]

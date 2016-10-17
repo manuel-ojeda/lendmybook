@@ -11,4 +11,5 @@ class Event(models.Model):
 	book = models.ForeignKey(Book, on_delete=models.CASCADE)
 	transaction_type = models.CharField(max_length=3,default="")
 	date = models.DateField(null=False,blank=False)
+	place = models.CharField(max_length=3,default="")
 

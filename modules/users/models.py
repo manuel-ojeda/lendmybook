@@ -48,8 +48,6 @@ class User(AbstractBaseUser, PermissionsMixin, models.Model):
     USERNAME_FIELD = 'username'
     REQUIRED_FIELDS = ['email','birth_date']
 
-    class Meta:
-        unique_together = ('id_user','email',)
 
     def get_short_name(self):
         return self.username

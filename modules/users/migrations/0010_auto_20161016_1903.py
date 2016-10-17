@@ -10,10 +10,3 @@ class Migration(migrations.Migration):
     dependencies = [
         ('users', '0009_auto_20161016_1859'),
     ]
-
-    operations = [
-        migrations.AlterUniqueTogether(
-            name='user',
-            unique_together=set([('id_user','email',)]),
-        ),
-    ]
