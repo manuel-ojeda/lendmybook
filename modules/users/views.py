@@ -5,7 +5,7 @@ from .models import User
 from .functions import LogIn
 
 def index(request):
-	return render(request, 'index.html')
+	return render(request, 'profile.html')
 
 def profile(request):
 	if request.user.is_authenticated():
