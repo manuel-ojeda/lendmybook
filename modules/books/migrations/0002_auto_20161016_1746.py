@@ -28,7 +28,7 @@ class Migration(migrations.Migration):
         migrations.AddField(
             model_name='book',
             name='base_book',
-            field=models.ForeignKey(default='', on_delete=django.db.models.deletion.CASCADE, to='base_books.BaseBook'),
+            field=models.ForeignKey(default=0, on_delete=django.db.models.deletion.CASCADE, to='base_books.BaseBook'),
         ),
         migrations.AddField(
             model_name='book',
@@ -38,16 +38,16 @@ class Migration(migrations.Migration):
         migrations.AddField(
             model_name='book',
             name='edition',
-            field=models.CharField(default='', max_length=20),
+            field=models.CharField(default='0', max_length=20),
         ),
         migrations.AddField(
             model_name='book',
             name='id_book',
-            field=models.AutoField(default='', primary_key=True, serialize=False),
+            field=models.AutoField(primary_key=True, serialize=False),
         ),
         migrations.AddField(
             model_name='book',
             name='owner',
-            field=models.ForeignKey(default='', on_delete=django.db.models.deletion.CASCADE, to=settings.AUTH_USER_MODEL),
+            field=models.ForeignKey(default=0, on_delete=django.db.models.deletion.CASCADE, to=settings.AUTH_USER_MODEL),
         ),
     ]

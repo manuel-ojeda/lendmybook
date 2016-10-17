@@ -31,7 +31,7 @@ class UserManager(BaseUserManager, models.Manager):
 class User(AbstractBaseUser, PermissionsMixin, models.Model):
 
     id_user = models.AutoField(primary_key=True)
-    id_facebook = models.CharField(primary_key=True,max_length=40,default="")
+    id_facebook = models.CharField(max_length=40,default="")
     username = models.CharField(max_length=20,unique=True,default="")
     first_name = models.CharField(max_length=20,default="")
     last_name = models.CharField(max_length=20,default="")
@@ -49,7 +49,7 @@ class User(AbstractBaseUser, PermissionsMixin, models.Model):
     REQUIRED_FIELDS = ['email','birth_date']
 
     class Meta:
-        unique_together = ('id_user','email')
+        unique_together = ('id_user','email',)
 
     def get_short_name(self):
         return self.username

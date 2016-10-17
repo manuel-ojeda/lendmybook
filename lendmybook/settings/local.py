@@ -6,7 +6,7 @@ from .base import *
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'lendmybook_database',
+        'NAME': 'lendmybook_db',
         'USER': 'lendmybook_admin',
         'PASSWORD': '1q2w3e4r5t',
         'HOST': 'localhost',

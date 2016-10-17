@@ -35,7 +35,7 @@ class Migration(migrations.Migration):
         migrations.AddField(
             model_name='user',
             name='id_facebook',
-            field=models.CharField(default='', max_length=40, primary_key=True),
+            field=models.CharField(default='', max_length=40),
         ),
         migrations.AddField(
             model_name='user',
@@ -54,10 +54,6 @@ class Migration(migrations.Migration):
         ),
         migrations.RemoveField(
             model_name='user',
-            name='age',
-        ),
-        migrations.RemoveField(
-            model_name='user',
             name='lastname',
         ),
         migrations.RemoveField(
@@ -66,6 +62,6 @@ class Migration(migrations.Migration):
         ),
         migrations.AlterUniqueTogether(
             name='user',
-            unique_together=set([('id_user', 'email')]),
+            unique_together=set([('id_user','email',)]),
         ),
     ]
