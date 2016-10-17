@@ -1,3 +1,7 @@
 from django.contrib import admin
+from .models import BaseBook
 
-# Register your models here.
+class BaseBookAdmin(admin.ModelAdmin):
+	pass
+
+admin.site.register(BaseBook,BaseBookAdmin)

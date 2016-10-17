@@ -45,7 +45,7 @@ class UserRegisterForm(forms.Form):
 	}))
 
 	description = forms.CharField(
-		widget = forms.Textarea(atts={
+		widget = forms.Textarea(attrs={
 		'class':'form-control',
 		'placeholder': 'Ingresa una breve descripcion'
 	}))

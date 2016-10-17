@@ -31,24 +31,3 @@ def profile(request):
 	book = Book.objects.get(id=request.user.book.id)
 	return render(request,'books/profile.html',{'book':book})
 	#return redirect('/')
-
-"""
-def getNewBook(request):
-	look_book = SearchBook()
-	if request.method == 'POST':
-		look_book = SearchBook(request.POST,request.FILES)
-		if look_book.is_valid():
-
-			searchBook = initialSearch.objects.create(
-				title = new_book.cleaned_data['title'],
-				author = new_book.cleaned_data['author'],
-				)
-
-			searchBook.save()
-
-		searchTitle = searchBook.title
-		searchAuthor = searchBook.author
-		results = getBookData(searchTitle,searchAuthor)
-		for option in results:
-	
-"""		
