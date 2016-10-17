@@ -21,5 +21,6 @@ urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^', include('modules.landing.url', namespace="landing")),
     url(r'^books/', include('modules.books.url', namespace="books")),
+    url(r'^basebooks/', include('modules.base_books.url', namespace="base_books")),
 ]
 

@@ -4,7 +4,7 @@ from modules.users.models import User
 from .forms import BookRegister
 from .functions import getBookData
 
-def postNewBook(request):
+def postNewBookUser(request):
 
 	new_book = BookRegister()
 	if request.method == 'POST':
@@ -12,14 +12,9 @@ def postNewBook(request):
 		if new_book.is_valid():
 
 			book = Book.objects.create(
-				title = new_book.cleaned_data['title'],
-				author = new_book.cleaned_data['author'],
-				description = new_book.cleaned_data['description'],
 				edition = new_book.cleaned_data['edition'],
-				categories = new_book.cleaned_data['categories'],
 				book_images = new_book.cleaned_data['book_images'],
-				action_tags = new_book.cleaned_data['action_tags'],
-				cover_image = new_book.cleaned_data['cover_image'],
+				aditional_info = new_book.cleaned_data['aditional_info'],
 				)
 
 			user = User.objects.get(pk=request.user.id)

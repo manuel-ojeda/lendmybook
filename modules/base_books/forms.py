@@ -9,4 +9,5 @@ class BaseBookRegister(forms.Form):
 	author = forms.CharField(max_length=200)
 	description = forms.CharField(widget=forms.Textarea)
 	cover_image = forms.ImageField()
+	isbn = forms.CharField(max_length=13)
 	categories = forms.MultipleChoiceField(required=True, widget=forms.CheckboxSelectMultiple, choices = CATEGORIES_CHOICES)
