@@ -1,0 +1,77 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+{% block title %}New Base Book{% endblock title %}
+{% block content %}
+
+
+
+<div class="container">
+	<div class="row">
+		<form class="form-horizontal" action="{% url 'base_books:postnewbasebook' %}" method="POST" enctype="multipart/form-data" >{% csrf_token %}
+<fieldset>
+
+<!-- Form Name -->
+<legend>Nuevo libro</legend>
+
+<div class="form-group">
+  <label class="col-md-4 control-label" >Titulo</label>  
+  <div class="col-md-5">
+      {{ new_base_book.title }}
+      {{ new_base_book.title.errors }}
+  </div>
+</div>
+
+<div class="form-group">
+  <label class="col-md-4 control-label" >Autor</label>  
+  <div class="col-md-5">
+     {{ new_base_book.author }}
+      {{ new_base_book.author.errors }}
+  </div>
+</div>
+
+<div class="form-group">
+  <label class="col-md-4 control-label" >Descripcion</label>  
+  <div class="col-md-5">
+     {{ new_base_book.description }}
+     {{ new_base_book.description.errors }}
+  </div>
+</div>
+
+<div class="form-group">
+  <label class="col-md-4 control-label" >Portada</label>  
+  <div class="col-md-5">
+     {{ new_base_book.cover_image }}
+      {{ new_base_book.cover_image.errors }}
+  </div>
+</div>
+
+<div class="form-group">
+  <label class="col-md-4 control-label" >ISBN</label>  
+  <div class="col-md-5">
+     {{ new_base_book.isbn }}
+      {{ new_base_book.isbn.errors }}
+  </div>
+</div>
+
+<div class="form-group">
+  <label class="col-md-4 control-label" >Categorias</label>  
+  <div class="col-md-5">
+     {{ new_base_book.categories }}
+      {{ new_base_book.categories.errors }}
+  </div>
+</div>
+
+<div class="form-group">
+  <label class="col-md-4 control-label" for="singlebutton">Listo</label>
+  <div class="col-md-4">
+    <button id="singlebutton" name="new_book" class="btn btn-primary">Enviar  </button>
+  </div>
+</div>
+
+</fieldset>
+</form>
+
+	</div>
+</div>
+
+{% endblock content %}

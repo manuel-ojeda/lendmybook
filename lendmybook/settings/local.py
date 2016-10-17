@@ -1,5 +1,4 @@
 from .base import *
-from .base import *
 
 # Database
 # https://docs.djangoproject.com/en/1.9/ref/settings/#databases
@@ -7,9 +6,9 @@ from .base import *
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'lendmybook',
-        'USER': 'lendmybook',
-        'PASSWORD': '123456',
+        'NAME': 'lendmybook_db',
+        'USER': 'lendmybook_admin',
+        'PASSWORD': '1q2w3e4r5t',
         'HOST': 'localhost',
         'PORT': '5432'
     }

@@ -29,6 +29,8 @@ DJANGO_APPS = [
 
 LOCAL_APPS = [
     'modules.books',
+    'modules.base_books',
+    'modules.events',
     'modules.users',
     'modules.landing',
     'modules.accounts',
@@ -39,9 +41,17 @@ THIRD_PARTY_APPS = [
     'allauth.account',
     'allauth.socialaccount',
     'allauth.socialaccount.providers.facebook',
+    'modules.books_preferences',
+    'modules.user_preferences',
+    'modules.landing',
+
 ]
 
-INSTALLED_APPS = DJANGO_APPS + LOCAL_APPS + THIRD_PARTY_APPS
+THIRD_PARTY_APPS = [
+    'rest_framework',
+]
+
+INSTALLED_APPS = DJANGO_APPS+LOCAL_APPS+THIRD_PARTY_APPS
 
 MIDDLEWARE_CLASSES = [
     'django.middleware.security.SecurityMiddleware',
@@ -98,6 +108,25 @@ AUTH_PASSWORD_VALIDATORS = [
         'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
     },
 ]
+
+REST_FRAMEWORK = {
+    'DEFAULT_PERMISSION_CLASSES': (
+        'rest_framework.permissions.IsAuthenticated',
+    ),
+    
+    'DEFAULT_AUTHENTICATION_CLASSES': (
+        'rest_framework.authentication.SessionAuthentication',
+        'rest_framework.authentication.BasicAuthentication',
+        'rest_framework_jwt.authentication.JSONWebTokenAuthentication',
+    ),
+}
+
+JWT_AUTH = {
+    
+    'JWT_EXPIRATION_DELTA': datetime.timedelta(hours=24),
+
+    'JWT_AUTH_HEADER_PREFIX': 'JWT',
+}
 
 # Internationalization
 # https://docs.djangoproject.com/en/1.9/topics/i18n/
