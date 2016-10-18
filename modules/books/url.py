@@ -6,6 +6,8 @@ urlpatterns = [
 
 	url(r'^postnewuserbook/$', postNewBookUser, name="postnewuserbook"),
 	url(r'^userbooks/$', profile, name="userbooks"),
+	url(r'^(?P<pk>[0-9]+)/$', ShowBook.as_view()),
+	url(r'^showallbasebooks/$', ListAllBooks.as_view()),
 ]
 
 	#url(r'^(?P<pk>[0-9]+)/$', ShowBook.as_view()),

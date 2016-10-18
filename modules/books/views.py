@@ -44,9 +44,9 @@ def profile(request):
 	#return redirect('/')
 
 
-##########################################
-				# API #
-##########################################
+########################################################################################################
+#API#
+########################################################################################################
 
 
 class ShowBook(APIView):
@@ -94,18 +94,3 @@ class ListAllBooks(APIView):
 			serializer.save()
 			return Response(serializer.data, status=status.HTTP_201_CREATED)
 		return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
-
-class BookImage(APIView):
-	#permission_classes = (ApiUserPermissions,)
-	#authentication_classes = (JSONWebTokenAuthentication,)
-
-	def get_object(self,pk):
-		try:
-			return Book.objects.get(pk=pk)
-		except Book.DoesNotExist:
-			raise Http404
-
-	def get(self,request,pk,format=None):
-		book = self.get_object(pk)
-		serializer = BookSerializer(book)
-		return Response(serializer.data)
