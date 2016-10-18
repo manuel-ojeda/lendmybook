@@ -2,84 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fd66d9ff-05b0-4ed3-b5dc-5b6e1cf7e482" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/base_books/__init__.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/base_books/admin.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/base_books/apps.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/base_books/forms.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/base_books/migrations/0001_initial.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/base_books/migrations/__init__.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/base_books/models.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/base_books/serializers.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/base_books/tests.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/base_books/url.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/base_books/views.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/books/forms.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/books/functions.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/books/migrations/0002_auto_20161016_1746.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/books/migrations/0003_auto_20161016_1834.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/books/migrations/0004_auto_20161016_1835.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/books/migrations/0005_auto_20161016_1837.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/books/migrations/0006_auto_20161016_1840.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/books/serializers.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/books/url.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/books_preferences/__init__.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/books_preferences/admin.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/books_preferences/apps.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/books_preferences/migrations/0001_initial.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/books_preferences/migrations/__init__.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/books_preferences/models.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/books_preferences/tests.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/books_preferences/url.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/books_preferences/views.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/events/__init__.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/events/admin.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/events/apps.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/events/forms.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/events/migrations/0001_initial.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/events/migrations/0002_event_place.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/events/migrations/__init__.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/events/models.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/events/tests.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/events/url.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/events/views.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/resource_forms/find_book.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/user_preferences/__init__.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/user_preferences/admin.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/user_preferences/apps.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/user_preferences/forms.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/user_preferences/migrations/0001_initial.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/user_preferences/migrations/__init__.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/user_preferences/models.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/user_preferences/tests.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/user_preferences/url.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/user_preferences/views.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/users/migrations/0002_auto_20161016_1746.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/users/migrations/0003_auto_20161016_1808.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/users/migrations/0004_auto_20161016_1837.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/users/migrations/0005_auto_20161016_1840.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/users/migrations/0006_auto_20161016_1848.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/users/migrations/0007_auto_20161016_1852.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/users/migrations/0008_auto_20161016_1856.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/users/migrations/0009_auto_20161016_1859.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/users/migrations/0010_auto_20161016_1903.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/users/migrations/0011_auto_20161016_1915.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/base.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/base_books/new_base.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/books/new.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lendmybook/settings/base.py" afterPath="$PROJECT_DIR$/lendmybook/settings/base.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lendmybook/settings/local.py" afterPath="$PROJECT_DIR$/lendmybook/settings/local.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lendmybook/settings/production.py" afterPath="$PROJECT_DIR$/lendmybook/settings/production.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lendmybook/urls.py" afterPath="$PROJECT_DIR$/lendmybook/urls.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/books/models.py" afterPath="$PROJECT_DIR$/modules/books/models.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/books/views.py" afterPath="$PROJECT_DIR$/modules/books/views.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/users/forms.py" afterPath="$PROJECT_DIR$/modules/users/forms.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/users/migrations/0001_initial.py" afterPath="$PROJECT_DIR$/modules/users/migrations/0001_initial.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/users/models.py" afterPath="$PROJECT_DIR$/modules/users/models.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/users/views.py" afterPath="$PROJECT_DIR$/modules/users/views.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/landing/index.html" afterPath="$PROJECT_DIR$/templates/landing/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/layouts/main.html" afterPath="$PROJECT_DIR$/templates/layouts/main.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/users/profile.html" afterPath="$PROJECT_DIR$/templates/users/profile.html" />
     </list>
     <ignored path="lendmybook.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -100,73 +26,33 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="urls.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/lendmybook/urls.py">
+      <file leaf-file-name="base.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/lendmybook/settings/base.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
-              <caret line="17" column="42" selection-start-line="17" selection-start-column="42" selection-end-line="17" selection-end-column="42" />
+            <state relative-caret-position="153">
+              <caret line="44" column="18" selection-start-line="44" selection-start-column="18" selection-end-line="44" selection-end-column="18" />
               <folding>
-                <element signature="e#0#41#0" expanded="true" />
+                <element signature="e#0#9#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/landing/index.html">
+      <file leaf-file-name="local.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/lendmybook/settings/local.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="100">
-              <caret line="57" column="29" selection-start-line="57" selection-start-column="29" selection-end-line="57" selection-end-column="29" />
+            <state relative-caret-position="85">
+              <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="main.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/layouts/main.html">
+      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1328">
-              <caret line="40" column="22" selection-start-line="40" selection-start-column="22" selection-end-line="40" selection-end-column="22" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="profile.html" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/templates/users/profile.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="14" column="33" selection-start-line="14" selection-start-column="33" selection-end-line="14" selection-end-column="33" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="url.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/modules/users/url.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="8" column="45" selection-start-line="8" selection-start-column="45" selection-end-line="8" selection-end-column="45" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/modules/users/views.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="15" column="28" selection-start-line="15" selection-start-column="28" selection-end-line="15" selection-end-column="28" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="base.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/lendmybook/settings/base.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="330">
-              <caret line="148" column="11" selection-start-line="148" selection-start-column="11" selection-end-line="148" selection-end-column="11" />
+            <state relative-caret-position="153">
+              <caret line="9" column="10" selection-start-line="9" selection-start-column="10" selection-end-line="9" selection-end-column="10" />
               <folding />
             </state>
           </provider>
@@ -201,10 +87,12 @@
         <option value="$PROJECT_DIR$/modules/accounts/apps.py" />
         <option value="$PROJECT_DIR$/modules/accounts/url.py" />
         <option value="$PROJECT_DIR$/lendmybook/urls.py" />
-        <option value="$PROJECT_DIR$/lendmybook/settings/base.py" />
         <option value="$PROJECT_DIR$/templates/landing/index.html" />
         <option value="$PROJECT_DIR$/templates/layouts/main.html" />
         <option value="$PROJECT_DIR$/templates/users/profile.html" />
+        <option value="$PROJECT_DIR$/lendmybook/settings/base.py" />
+        <option value="$PROJECT_DIR$/lendmybook/settings/local.py" />
+        <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
   </component>
@@ -273,179 +161,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="templates" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
               <option name="myItemId" value="lendmybook" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="lendmybook" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="templates" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="users" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="lendmybook" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="lendmybook" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="templates" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="profile" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="lendmybook" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="lendmybook" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="templates" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="layouts" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="lendmybook" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="lendmybook" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="templates" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="landing" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="lendmybook" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="lendmybook" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="templates" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="accounts" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="lendmybook" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="lendmybook" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="modules" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="users" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="lendmybook" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="lendmybook" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="modules" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="lendmybook" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="lendmybook" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="modules" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="accounts" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="lendmybook" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="lendmybook" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="lendmybook" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="lendmybook" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="lendmybook" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="lendmybook" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="settings" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -963,14 +679,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lendmybook/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="51" column="0" selection-start-line="51" selection-start-column="0" selection-end-line="51" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/modules/profile/views.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
@@ -992,16 +700,6 @@
         <state relative-caret-position="153">
           <caret line="11" column="21" selection-start-line="11" selection-start-column="21" selection-end-line="11" selection-end-column="21" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lendmybook/settings/local.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="35" selection-start-line="8" selection-start-column="35" selection-end-line="8" selection-end-column="35" />
-          <folding>
-            <element signature="e#0#19#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1045,14 +743,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/modules/accounts/apps.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="20" selection-start-line="0" selection-start-column="20" selection-end-line="0" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/modules/landing/views.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
@@ -1087,14 +777,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/modules/users/url.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="8" column="45" selection-start-line="8" selection-start-column="45" selection-end-line="8" selection-end-column="45" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/modules/users/views.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
@@ -1103,44 +785,110 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lendmybook/urls.py">
+    <entry file="file://$PROJECT_DIR$/modules/users/url.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="17" column="42" selection-start-line="17" selection-start-column="42" selection-end-line="17" selection-end-column="42" />
-          <folding>
-            <element signature="e#0#41#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lendmybook/settings/base.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="148" column="11" selection-start-line="148" selection-start-column="11" selection-end-line="148" selection-end-column="11" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/landing/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="100">
-          <caret line="57" column="29" selection-start-line="57" selection-start-column="29" selection-end-line="57" selection-end-column="29" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/layouts/main.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1328">
-          <caret line="40" column="22" selection-start-line="40" selection-start-column="22" selection-end-line="40" selection-end-column="22" />
+        <state relative-caret-position="136">
+          <caret line="9" column="1" selection-start-line="9" selection-start-column="1" selection-end-line="9" selection-end-column="1" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/users/profile.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" column="33" selection-start-line="14" selection-start-column="33" selection-end-line="14" selection-end-column="33" />
+        <state relative-caret-position="170">
+          <caret line="10" column="24" selection-start-line="10" selection-start-column="24" selection-end-line="10" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/layouts/main.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="128" column="0" selection-start-line="128" selection-start-column="0" selection-end-line="128" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/landing/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="61" column="22" selection-start-line="61" selection-start-column="22" selection-end-line="61" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lendmybook/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="32" selection-start-line="11" selection-start-column="32" selection-end-line="11" selection-end-column="32" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modules/events/url.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lendmybook/settings/production.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" column="22" selection-start-line="12" selection-start-column="22" selection-end-line="12" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modules/books/apps.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modules/accounts/apps.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lendmybook/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="51" column="0" selection-start-line="51" selection-start-column="0" selection-end-line="51" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lendmybook/settings/base.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="44" column="18" selection-start-line="44" selection-start-column="18" selection-end-line="44" selection-end-column="18" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="10" selection-start-line="9" selection-start-column="10" selection-end-line="9" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lendmybook/settings/local.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
           <folding />
         </state>
       </provider>
