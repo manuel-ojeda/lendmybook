@@ -1,5 +1,5 @@
 from django.conf.urls import url
-from .views import postNewBaseBook, ShowBaseBook, ListAllBaseBooks, BaseBookImage
+from .views import postNewBaseBook, ShowBaseBook, ListAllBaseBooks
 
 urlpatterns = [
 	

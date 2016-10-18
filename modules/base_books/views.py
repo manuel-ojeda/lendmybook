@@ -85,18 +85,3 @@ class ListAllBaseBooks(APIView):
 			serializer.save()
 			return Response(serializer.data, status=status.HTTP_201_CREATED)
 		return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
-
-class BaseBookImage(APIView):
-	#permission_classes = (ApiUserPermissions,)
-	#authentication_classes = (JSONWebTokenAuthentication,)
-
-	def get_object(self,pk):
-		try:
-			return BaseBook.objects.get(pk=pk)
-		except BaseBook.DoesNotExist:
-			raise Http404
-
-	def get(self,request,pk,format=None):
-		base_book = self.get_object(pk)
-		serializer = BaseBookImageSerializer(base_book)
-		return Response(serializer.data)
