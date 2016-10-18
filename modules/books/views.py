@@ -1,8 +1,19 @@
+#For the front integrated with back
 from django.shortcuts import render, redirect
 from .models import Book
 from modules.users.models import User
 from .forms import BookRegister
 from .functions import getBookData
+
+#for the API
+from rest_framework.views import APIView
+from rest_framework.response import Response
+from rest_framework import status
+from .serializers import BookSerializer
+from django.http import Http404
+from rest_framework.permissions import IsAuthenticated
+from rest_framework_jwt.authentication import JSONWebTokenAuthentication
+#from .permissions import ApiUserPermissions
 
 def postNewBookUser(request):
 

@@ -7,6 +7,4 @@ urlpatterns = [
 	
 	url(r'^(?P<pk>[0-9]+)/$', ShowBaseBook.as_view()),
 	url(r'^showallbasebooks/$', ListAllBaseBooks.as_view()),
-	url(r'^basebookimage/(?P<pk>[0-9]+)$', BaseBookImage.as_view()),
-
 ]

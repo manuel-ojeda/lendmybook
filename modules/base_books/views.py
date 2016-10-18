@@ -53,7 +53,7 @@ class ShowBaseBook(APIView):
 
 	def get(self,request,pk,format=None):
 		base_book = self.get_object(pk)
-		serializer = BaseBookSerializer(base_book)
+		serializer = BaseBookSerializer(base_book, context={"request": request})
 		return Response(serializer.data)
 
 	def put(self,request,pk,format=None):
@@ -98,5 +98,5 @@ class BaseBookImage(APIView):
 
 	def get(self,request,pk,format=None):
 		base_book = self.get_object(pk)
-		serializer = BaseBookSerializer(base_book)
+		serializer = BaseBookImageSerializer(base_book)
 		return Response(serializer.data)

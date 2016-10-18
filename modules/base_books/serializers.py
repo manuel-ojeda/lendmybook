@@ -10,6 +10,6 @@ class BaseBookSerializer(serializers.ModelSerializer):
 		fields = ('id_base_book','title','author','description','image_url','isbn','categories')
 
 	def getCoverImage(self, BaseBook):
-		n = str(BaseBook.cover_image)
-		image_url = "http://www.lendmybook"+n
+		n = str(BaseBook.cover_image.url)
+		image_url = "http://lendmybook.mx"+n
 		return image_url
