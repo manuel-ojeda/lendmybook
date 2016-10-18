@@ -10,8 +10,6 @@ urlpatterns = [
     url(r'^', include('modules.landing.url', namespace="landing")),
     url(r'^books/', include('modules.books.url', namespace="books")),
     url(r'^basebooks/', include('modules.base_books.url', namespace="base_books")),
-    
-
     url(r'^api/books/', include('modules.books.url', namespace="apibooks")),
     url(r'^api/basebooks/', include('modules.base_books.url', namespace="apibasebooks")),
     #url(r'^api/bookpreferences/', include('modules.books_preferences.url', namespace="apibookspreferences")),
@@ -19,7 +17,7 @@ urlpatterns = [
     url(r'^api/user/', include('modules.users.url', namespace="apiusers")),
     #url(r'^api/userpreferences/', include('modules.user_preferences.url', namespace="apiuserpreferences")),
     #url(r'^api-auth/', obtain_jwt_token),
-]+static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
 
 
