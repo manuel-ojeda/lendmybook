@@ -22,3 +22,4 @@ STATICFILES_DIRS = [BASE_DIR.child('static')]
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(os.getcwd(), 'media/')
+
