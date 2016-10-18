@@ -7,8 +7,8 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'NAME': 'lendmybook',
-        'USER': 'lendmybook_admin',
-        'PASSWORD': '1q2w3e4r5t',
+        'USER': 'lendmybook',
+        'PASSWORD': '123456',
         'HOST': 'localhost',
         'PORT': '5432'
     }
