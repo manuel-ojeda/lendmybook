@@ -35,6 +35,11 @@ def postNewBaseBook(request):
 			return redirect('/')
 	return render(request, 'base_books/new_base.html', {'new_base_book':new_base_book})
 
+
+
+########################################################################################################
+#API#
+########################################################################################################
 class ShowBaseBook(APIView):
 
 	#permission_classes = (IsAuthenticated,)
@@ -48,7 +53,7 @@ class ShowBaseBook(APIView):
 
 	def get(self,request,pk,format=None):
 		base_book = self.get_object(pk)
-		serializer = BaseBookSerializer(base_book)
+		serializer = BaseBookSerializer(base_book, context={"request": request})
 		return Response(serializer.data)
 
 	def put(self,request,pk,format=None):
@@ -80,5 +85,3 @@ class ListAllBaseBooks(APIView):
 			serializer.save()
 			return Response(serializer.data, status=status.HTTP_201_CREATED)
 		return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
-
-

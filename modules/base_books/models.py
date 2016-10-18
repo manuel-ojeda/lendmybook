@@ -1,5 +1,6 @@
 from django.db import models
 from django.contrib.postgres.fields import ArrayField
+from django.conf import settings
 
 
 class BaseBook(models.Model):	
@@ -8,6 +9,6 @@ class BaseBook(models.Model):
 	title = models.CharField(max_length=70,default="")
 	author = models.CharField(max_length=200,default="")
 	description = models.TextField(default="")
-	cover_image = models.ImageField(upload_to='../media/cover_images/',default='../media/default_images/default_cover.png')
+	cover_image = models.ImageField(upload_to=str(settings.MEDIA_URL)+'cover_images/',default=str(settings.MEDIA_URL)+'default_images/default_cover.png')
 	isbn = models.CharField(max_length=13,default="")
 	categories = ArrayField(models.CharField(max_length=50,blank=False),default=[])
