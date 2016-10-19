@@ -1,5 +1,5 @@
 from django.conf.urls import url
-from .views import postNewBookUser, profile
+from .views import postNewBookUser, profile, ShowBook, ListAllBooks
 #ShowBook, ListAllBooks
 
 urlpatterns = [

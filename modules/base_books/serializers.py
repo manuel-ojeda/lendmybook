@@ -11,5 +11,6 @@ class BaseBookSerializer(serializers.ModelSerializer):
 
 	def getCoverImage(self, BaseBook):
 		n = str(BaseBook.cover_image.url)
-		image_url = "http://lendmybook.mx"+n
+		#image_url = "http://lendmybook.mx"+n
+		image_url = "localhost:8000"+n
 		return image_url

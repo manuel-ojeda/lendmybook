@@ -6,6 +6,8 @@ DELEGATIONS_CHOICES = (('ALO',"Álvaro Obregón"),('AZC',"Azcapotzalco"),('BEJ',
 
 class UserPreferencesForm(forms.Form):
 
+	description = forms.CharField(widget=forms.Textarea)
+
 	city = forms.CharField(required=True,
 		max_length=30,
 		widget=forms.TextInput())
@@ -17,6 +19,7 @@ class UserPreferencesForm(forms.Form):
 	fav_categories = forms.MultipleChoiceField(required=False,
 		widget=forms.CheckboxSelectMultiple,
 		choices = CATEGORIES_CHOICES)
+
 
 	review = models.DecimalField(max_value=10.0,min_value=0.0)
 	

@@ -12,4 +12,3 @@ class Event(models.Model):
 	transaction_type = models.CharField(max_length=3,default="")
 	date = models.DateField(null=False,blank=False)
 	place = models.CharField(max_length=3,default="")
-

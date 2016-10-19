@@ -7,7 +7,8 @@ ACTIONS_CHOICES =(('SEL','Vender'),('LEN','Prestar'),('GAW','Regalar'),('REN','R
 
 class BookRegister(forms.Form):
 
-	base_book = forms.ModelChoiceField(queryset=BaseBook.objects.values('title','author'))
+	base_book = forms.ModelChoiceField(queryset=BaseBook.objects.all().values('title','author'))
+	owner = forms.ModelChoiceField(queryset=)
 	edition = forms.CharField(max_length=20)
 	book_images = forms.ImageField()	
 	action_tags = forms.MultipleChoiceField(required=False, widget=forms.CheckboxSelectMultiple, choices = ACTIONS_CHOICES)	
