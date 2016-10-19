@@ -1,7 +1,6 @@
 $(document).ready(function() {
-	console.log('listo');
-
 	$('#login-link').on('click', function() {
+		console.log('Muestra el modal de iniciar sesión');
 		$('#login-modal').modal('show');
 	});
-})
+});

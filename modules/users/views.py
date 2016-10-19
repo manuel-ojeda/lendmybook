@@ -10,7 +10,7 @@ def index(request):
 def profile(request):
 	if request.user.is_authenticated():
 
-		user = User.objects.get(id=request.user.id_user)
+		user = User.objects.get(id_user=request.user.id_user)
 		return render(request, 'users/profile.html', {'user':user})
 	else:
 		return redirect('/')
