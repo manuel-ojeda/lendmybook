@@ -3,33 +3,61 @@ from django.contrib.auth import authenticate, login, logout
 from .forms import UserRegisterForm, LoginForm
 from .models import User
 from .functions import LogIn
+from modules.user_preferences.models import Preferences
 
 def index(request):
-	return render(request, 'profile.html')
+	if request.method == "GET":
+		username = request.GET['username']
+
+		try:
+			user = User.objects.get(username=username)
+		except User.DoesNotExist:
+			user = None
+
+		if user == None:
+			return
+
+		try:
+			preferences = Preferences.objects.get(user_linked=user.id_user)
+		except Preferences.DoesNotExist:
+			preferences = None
+
+		return render(request, 'users/view.html', {'profile':user, 'preferences':preferences})
+
 
 def profile(request):
 	if request.user.is_authenticated():
 
 		user = User.objects.get(id_user=request.user.id_user)
-		return render(request, 'users/profile.html', {'user':user})
+		return render(request, 'users/edit.html', {'user':user})
 	else:
 		return redirect('/')
 
 def edit(request):
-	if request.method == "POST":
+	if request.method == "GET":
+		return render(request, 'users/edit.html')
+	elif request.method == "POST":
 		if request.user.is_authenticated():
-
-			user = User.objects.get(id=request.user.id_user)
+			user = User.objects.get(id_user=request.user.id_user)
 			user.username = request.POST["username"]
-			user.first_name = request.POST["fist_name"]
+			user.first_name = request.POST["first_name"]
 			user.last_name = request.POST["last_name"]
 			user.email = request.POST["email"]
 			user.birth_date = request.POST["birth_date"]
 			user.save()
 
-			return redirect('/profile/')
+			return redirect('/users/profile')
 		return redirect('/')
 	return redirect('/')
+
+def view(request, username):
+	if request.method == "GET":
+		try:
+			user = User.objects.get(username=username)
+		except Book.DoesNotExist:
+			user = None
+
+		return render(request, 'users/view.html')
 
 def userlogin(request):
 	if request.method == "POST":

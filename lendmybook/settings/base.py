@@ -83,7 +83,8 @@ WSGI_APPLICATION = 'lendmybook.wsgi.application'
 # https://docs.djangoproject.com/en/1.9/ref/settings/#auth-password-validators
 AUTH_USER_MODEL = 'users.User'
 ACCOUNT_AUTHENTICATED_LOGIN_REDIRECTS = False
-LOGIN_REDIRECT_URL = '/accounts/user'
+LOGIN_REDIRECT_URL = '/users/profile'
+ACCOUNT_USERNAME_REQUIRED = False
 
 SOCIAL_AUTH_FACEBOOK_PROFILE_EXTRA_PARAMS = {
     'fields': 'id,name,email',
@@ -123,4 +124,3 @@ AUTHENTICATION_BACKENDS = (
 )
 
 SITE_ID = 1
-

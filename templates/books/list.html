@@ -1,0 +1,29 @@
+{% extends "layouts/main.html" %}
+{% load staticfiles %}
+{% block title %}LendMyBook{% endblock title %}
+{% block content %}
+    <div class="container">
+        {% for book in books %}
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="panel panel-default">
+                        <div class="panel-body">
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <img class="cover-image" src="/media/{{ book.cover_image }}"/>
+                                </div>
+                                <div class="col-md-8">
+                                    {{ book.title }}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+{% endblock content %}
+
+{% block css %}
+    <link rel="stylesheet" href="{% static 'css/books/index/search.css' %}">
+{% endblock css %}

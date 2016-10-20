@@ -26,7 +26,7 @@ def setPreferences(request):
 def viewPreferences(request):
 	#if request.user.is_authenticated():
 	book = Book.objects.get(id=request.user.book.id)
-	return render(request,'books/profile.html',{'book':book})
+	return render(request,'books/login.html',{'book':book})
 	#return redirect('/')
 
 def reviewUser(request):

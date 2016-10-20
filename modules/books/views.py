@@ -2,6 +2,7 @@
 from django.shortcuts import render, redirect
 from .models import Book
 from modules.users.models import User
+from modules.base_books.models import BaseBook
 from .forms import BookRegister
 from .functions import getBookData
 
@@ -40,9 +41,48 @@ def postNewBookUser(request):
 def profile(request):
 	#if request.user.is_authenticated():
 	book = Book.objects.get(id=request.user.book.id)
-	return render(request,'books/profile.html',{'book':book})
+	return render(request,'books/login.html',{'book':book})
 	#return redirect('/')
 
+def search(request):
+	if request.method == "POST":
+		title= request.POST['title']
+
+		try:
+			base_books = BaseBook.objects.all().filter(title__icontains=title)
+		except BaseBook.DoesNotExist:
+			base_books = None
+
+		return render(request, 'books/search.html', {'base_books': base_books})
+	return render(request, 'landing/index.html')
+
+def list(request, id_book):
+	if request.method == "GET":
+		try:
+			books = Book.objects.all().filter(base_book=id_book)
+		except Book.DoesNotExist:
+			books = None
+
+		return render(request, 'books/list.html', {'books': books})
+	return redirect('/')
+
+def view(request, id_book):
+	if request.method == "GET":
+		try:
+			book = Book.objects.get(id_book=id_book)
+		except Book.DoesNotExist:
+			book = None
+
+		if book != None:
+			try:
+				owner = User.objects.get(id_user=book.owner)
+			except User.DoesNotExist:
+				owner = None
+		else:
+			owner = None
+
+		return render(request, 'books/view.html', {'book': book, 'owner': owner})
+	return render(request, 'books/view.html')
 
 ##########################################
 				# API #

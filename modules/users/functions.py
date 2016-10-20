@@ -1,7 +1,8 @@
 from django.contrib.auth import authenticate, login
 
 
-def LogIn(request, username, password):
+def LogIn(request, password):
+	pass
 	user = authenticate(
 		username = username,
 		password = password)

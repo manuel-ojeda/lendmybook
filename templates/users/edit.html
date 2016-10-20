@@ -1,0 +1,60 @@
+{% extends "layouts/main.html" %}
+{% block title %}Perfil{% endblock title %}
+{% block content %}
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="panel panel-default">
+                    <div class="panel-body">
+                        <img class="avatar border-white"
+                             src="http://graph.facebook.com/{{ user.socialaccount_set.all.0.uid }}/picture/?type=large"
+                             alt="..."/>
+                    </div>
+                </div>
+                <h4 class="title"><br/>
+                    <a href="#">
+                        <small>@ {{ user.username }}</small>
+                    </a>
+                </h4>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="content">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <form action="{% url 'users:edit' %}" method="POST"
+                                  enctype="multipart/form-data">{% csrf_token %}
+                                <div class="form-group">
+                                    <label>Nombre</label>
+                                    <input name="first_name" type="text" class="form-control border-input" placeholder="Nombre"
+                                           value="{{ user.first_name }}">
+                                </div>
+                                <div class="form-group">
+                                    <label>Apellidos</label>
+                                    <input name="last_name" type="text" class="form-control border-input" placeholder="Apellidos"
+                                           value="{{ user.last_name }}">
+                                </div>
+                                 <div class="form-group">
+                                    <label for="email">Email</label>
+                                    <input name="email" type="email" class="form-control border-input" placeholder="Email"
+                                           value="{{ user.email }}">
+                                </div>
+                                <div class="form-group">
+                                    <label>Fecha de nacimiento</label>
+                                    <input name="birth_date" type="date" class="form-control border-input" placeholder="Fecha de nacimiento"
+                                           value="{{ user.birth_date }}">
+                                </div>
+                                <button type="submit" class="btn btn-primary btn-fill btn-wd">Actualizar</button>
+                            </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock content %}
+{% block footer %}
+{% endblock footer %}
