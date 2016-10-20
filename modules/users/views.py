@@ -4,75 +4,90 @@ from .forms import UserRegisterForm, LoginForm
 from .models import User
 from .functions import LogIn
 
-def index(request):
-	return render(request, 'index.html')
+class FrontUser():
 
-def profile(request):
-	if request.user.is_authenticated():
+	def index(request):
+		return render(request, 'index.html')
 
-		user = User.objects.get(id=request.user.id_user)
-		return render(request, 'users/profile.html', {'user':user})
-	else:
-		return redirect('/')
-
-def edit(request):
-	if request.method == "POST":
+	def profile(request):
 		if request.user.is_authenticated():
 
 			user = User.objects.get(id=request.user.id_user)
-			user.username = request.POST["username"]
-			user.first_name = request.POST["fist_name"]
-			user.last_name = request.POST["last_name"]
-			user.email = request.POST["email"]
-			user.birth_date = request.POST["birth_date"]
-			user.save()
+			return render(request, 'users/profile.html', {'user':user})
+		else:
+			return redirect('/')
 
-			return redirect('/profile/')
+	def edit(request):
+		if request.method == "POST":
+			if request.user.is_authenticated():
+
+				user = User.objects.get(id=request.user.id_user)
+				user.id_facebook = reques.POST["id_facebook"]
+				user.name = request.POST["name"]
+				user.email = request.POST["email"]
+				user.save()
+
+				return redirect('/profile/')
+			return redirect('/')
 		return redirect('/')
-	return redirect('/')
 
-def userlogin(request):
-	if request.method == "POST":
-		user_register = UserRegisterForm()
+	def userlogin(request):
+		if request.method == "POST":
+			user_register = UserRegisterForm()
 
-		if 'register_form' in request.POST:
-			user_register = UserRegisterForm(request.POST)
+			if 'register_form' in request.POST:
+				user_register = UserRegisterForm(request.POST)
 
-			if user_register.is_valid():
-				User.objects.create_user(
-					username = user_register.cleaned_data['username'],
-					first_name = user_register.cleaned_data['first_name'],
-					last_name = user_register.cleaned_data['last_name'],
-					email = user_register.cleaned_data['email'],
-					password = user_register.cleaned_data['password'],
-					birth_date = user_register.cleaned_data['birth_date'],
-				)
+				if user_register.is_valid():
+					User.objects.create_user(
+						id_facebook = user_register.cleaned_data['id_facebook'],
+						name = user_register.cleaned_data['name'],
+						email = user_register.cleaned_data['email'],
+					)
 
-				LogIn(
-					request, 
-					user_register.cleaned_data['username'], 
-					user_register.cleaned_data['password']
-				)
+					LogIn(
+						request,
+						id_facebook = user_register.cleaned_data['id_facebook'],
+					)
 
-				return redirect('/')
-		if 'login_form' in request.POST:
-			login_form = LoginForm(request.POST)
-
-			if login_form.is_valid():
-				user = authenticate(
-					login_form.cleaned_data['username'], 
-					login_form.cleaned_data['password'],
-				)
-				if user is not None:
-					login(request, user)
 					return redirect('/')
-				
-	else:
-		user_register = UserRegisterForm()
-		login_form = LoginForm()
-	return render(request, 'users/login.html', {'user_register': user_register, 'login_form': login_form})
+			if 'login_form' in request.POST:
+				login_form = LoginForm(request.POST)
 
-def userlogout(request):
-	logout(request)
+				if login_form.is_valid():
+					user = authenticate(
+						id_facebook = user_register.cleaned_data['id_facebook'],
+					)
+					if user is not None:
+						login(request, user)
+						return redirect('/')
+					
+		else:
+			user_register = UserRegisterForm()
+			login_form = LoginForm()
+		return render(request, 'users/login.html', {'user_register': user_register, 'login_form': login_form})
 
-	return redirect('/')
+	def userlogout(request):
+		logout(request)
+
+		return redirect('/')
+
+class ApiUser():
+
+	def get_object(self, request):
+		try:
+			return User.objects.get(request.id_facebook=id_facebook)
+		except User.DoesNotExist:
+			raise Http404
+
+	def signIn(self,request):
+		current_user = self.get_object()
+		serializer = UserSerializer(current_user)
+		return Response(serializer.data,status=status.HTTP_200_OK)
+
+	def SignUp(self,request):
+		serializer = UserSerializer(data= request.data)
+		if serializer.is_valid():
+			serializer.save()
+			return Response(status=status.HTTP_201_CREATED)
+		return Response(status=status.HTTP_400_BAD_REQUEST)

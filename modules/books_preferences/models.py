@@ -1,4 +1,4 @@
-from django.db import models
+ss from django.db import models
 from django.contrib.postgres.fields import ArrayField
 from modules.books.models import Book
 

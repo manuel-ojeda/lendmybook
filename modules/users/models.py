@@ -23,7 +23,7 @@ class UserManager(BaseUserManager, models.Manager):
 
 class User(AbstractBaseUser, PermissionsMixin, models.Model):
 
-    #id_user = models.AutoField(primary_key=True)
+    id_user = models.AutoField(primary_key=True)
     id_facebook = models.CharField(primary_key=True,max_length=100,default="")
     #username = models.CharField(max_length=20,unique=True,default="")
     name = models.CharField(max_length=50,default="")

@@ -10,7 +10,7 @@ class BookRegister(forms.Form):
 	base_book = forms.ModelChoiceField(queryset=BaseBook.objects.all().values('title','author'))
 	owner = forms.ModelChoiceField(queryset=)
 	edition = forms.CharField(max_length=20)
-	book_images = forms.ImageField()	
+	#book_images = forms.ImageField()	
 	action_tags = forms.MultipleChoiceField(required=False, widget=forms.CheckboxSelectMultiple, choices = ACTIONS_CHOICES)	
 	status = forms.BooleanField()
 	aditional_info = forms.CharField(widget=forms.Textarea)

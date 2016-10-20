@@ -49,7 +49,7 @@ def profile(request):
 ########################################################################################################
 
 
-class ShowBook(APIView):
+class UserBook(APIView):
 
 	#permission_classes = (IsAuthenticated,)
 	#authentication_classes = (JSONWebTokenAuthentication,)
@@ -64,6 +64,12 @@ class ShowBook(APIView):
 		book = self.get_object(pk)
 		serializer = BookSerializer(book)
 		return Response(serializer.data)
+
+	
+	def post(self,request,pk,format=None):
+		serializer = BookSerializer(book)
+		return Response()
+
 
 	def put(self,request,pk,format=None):
 		book = self.get_object(pk)
