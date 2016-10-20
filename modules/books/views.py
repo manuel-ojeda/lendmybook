@@ -46,14 +46,14 @@ def profile(request):
 
 def search(request):
 	if request.method == "POST":
-		title= request.POST['title']
+		title = request.POST['title']
 
 		try:
 			base_books = BaseBook.objects.all().filter(title__icontains=title)
 		except BaseBook.DoesNotExist:
 			base_books = None
 
-		return render(request, 'books/search.html', {'base_books': base_books})
+		return render(request, 'books/search.html', {'base_books': base_books, 'title': title})
 	return render(request, 'landing/index.html')
 
 def list(request, id_book):
