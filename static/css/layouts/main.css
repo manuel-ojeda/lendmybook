@@ -3,3 +3,12 @@ footer {
 	color: #fff;
 	text-align: center;
 }
+
+#logo {
+	width: 45px;
+	height: auto;
+}
+
+#navbar {
+	height: 80px;
+}

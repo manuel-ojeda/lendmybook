@@ -56,10 +56,18 @@ def search(request):
 		return render(request, 'books/search.html', {'base_books': base_books, 'title': title})
 	return render(request, 'landing/index.html')
 
-def list(request, id_book):
+def list(request, base_book_id):
 	if request.method == "GET":
+		print('id_base_book')
+		print(base_book_id)
+
 		try:
-			books = Book.objects.all().filter(base_book=id_book)
+			base_book = BaseBook.objects.filter(pk=base_book_id)
+		except Book.DoesNotExist:
+			base_book = None
+
+		try:
+			books = Book.objects.filter(base_book=base_book)
 		except Book.DoesNotExist:
 			books = None
 

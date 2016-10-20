@@ -10,10 +10,18 @@
                         <div class="panel-body">
                             <div class="row">
                                 <div class="col-md-4">
-                                    <img class="cover-image" src="/media/{{ book.cover_image }}"/>
+                                    <a href="/books/view/{{ book.id_base_book }}"><img class="cover-image" src="/media/{{ book.book_images}}"/></a>
                                 </div>
                                 <div class="col-md-8">
-                                    {{ book.title }}
+                                    <h1>{{ book.base_book.title }}</h1>
+                                    <h4>{{ book.edition }}</h4>
+                                    <a href="/users/profile"><h5>{{ book.owner.first_name }}</h5></a>
+
+                                    <br>
+                                    {{ book.aditional_info}}
+
+                                    {{ book.book_preferences.action_tags }}
+
                                 </div>
                             </div>
                         </div>
