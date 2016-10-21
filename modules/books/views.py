@@ -65,11 +65,6 @@ class UserBook(APIView):
 		serializer = BookSerializer(book)
 		return Response(serializer.data)
 
-	
-	def post(self,request,pk,format=None):
-		serializer = BookSerializer(book)
-		return Response()
-
 
 	def put(self,request,pk,format=None):
 		book = self.get_object(pk)
@@ -95,6 +90,8 @@ class ListAllBooks(APIView):
 		return Response(serializer.data)
 
 	def post(self,request):
+		
+		print(request.data)
 		serializer = BookSerializer(data= request.data)
 		if serializer.is_valid():
 			serializer.save()

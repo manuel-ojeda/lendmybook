@@ -18,6 +18,6 @@ urlpatterns = [
     #url(r'^api/events/', include('modules.events.url', namespace="apievents")),
     url(r'^api/user/', include('modules.users.url', namespace="apiusers")),
     #url(r'^api/userpreferences/', include('modules.user_preferences.url', namespace="apiuserpreferences")),
-    #url(r'^api-auth/', obtain_jwt_token),
+    url(r'^api-auth/', obtain_jwt_token),
 
 ]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

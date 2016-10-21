@@ -1,4 +1,5 @@
 import os
+import datetime
 
 from unipath import Path
 
@@ -92,7 +93,7 @@ AUTH_PASSWORD_VALIDATORS = [
         'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
     },
 ]
-"""
+
 REST_FRAMEWORK = {
     'DEFAULT_PERMISSION_CLASSES': (
         'rest_framework.permissions.IsAuthenticated',
@@ -111,7 +112,7 @@ JWT_AUTH = {
 
     'JWT_AUTH_HEADER_PREFIX': 'JWT',
 }
-"""
+
 # Internationalization
 # https://docs.djangoproject.com/en/1.9/topics/i18n/
 
