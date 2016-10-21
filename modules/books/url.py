@@ -9,7 +9,6 @@ urlpatterns = [
 
 	url(r'^(?P<pk>[0-9]+)/$', UserBook.as_view()),
 	url(r'^showallbasebooks/$', ListAllBooks.as_view()),
-	url(r'')
 ]
 
 	#url(r'^(?P<pk>[0-9]+)/$', ShowBook.as_view()),

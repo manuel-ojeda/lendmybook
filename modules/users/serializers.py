@@ -5,5 +5,4 @@ class UserSerializer(serializers.ModelSerializer):
 
 	
 	class Meta:
-		model = BaseBook
-		fields = ('id_user','id_facebook','name','email')
+		model = User
