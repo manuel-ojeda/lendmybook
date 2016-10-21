@@ -2,7 +2,7 @@ from django import forms
 from .models import BookPreferences
 from modules.base_books.models import BaseBook
 
-#ACTIONS_CHOICES =(('SEL','Vender'),('LEN','Prestar'),('GAW','Regalar'),('REN','Rentar'),('INT','Intercambiar'))
+ACTIONS_CHOICES =(('SEL','Vender'),('LEN','Prestar'),('GAW','Regalar'),('REN','Rentar'),('INT','Intercambiar'))
 
 
 class BookPreferencesRegister(forms.Form):
