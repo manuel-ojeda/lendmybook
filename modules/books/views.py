@@ -2,6 +2,7 @@
 from django.shortcuts import render, redirect
 from .models import Book
 from modules.users.models import User
+from modules.base_books.models import BaseBook
 from .forms import BookRegister
 from .functions import getBookData
 
@@ -90,10 +91,21 @@ class ListAllBooks(APIView):
 		return Response(serializer.data)
 
 	def post(self,request):
-		
-		print(request.data)
-		serializer = BookSerializer(data= request.data)
+		serializer = BookSerializer(data = request.data)
 		if serializer.is_valid():
 			serializer.save()
-			return Response(serializer.data, status=status.HTTP_201_CREATED)
-		return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+			return Response(status=status.HTTP_201_CREATED)
+		return Response(serializer.errors,status=status.HTTP_400_BAD_REQUEST)
+
+"""
+data = request.data
+		base = BaseBook.objects.get(pk=data['base_book'])
+		owner = User.objects.get(pk=data['owner'])
+		book = Book(
+			base_book = base,
+			owner = owner,
+			edition = data['edition'],
+			aditional_info = data['aditional_info']
+			)
+		book.save()
+"""
