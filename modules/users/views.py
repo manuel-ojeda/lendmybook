@@ -87,14 +87,14 @@ class SignUp(APIView):
 
 
 class LogIn(APIView):
-	def get_object(self, request):
+	def get_object(self,request):
 		try:
-			facebook = request.POST["id_facebook"]
+			facebook = request.data["id_facebook"]
 			return User.objects.get(facebook=id_facebook)
 		except User.DoesNotExist:
 			raise Http404
 
 	def post(self,request):
-		current_user = self.get_object()
+		current_user = self.get_object(request)
 		serializer = UserSerializer(current_user)
 		return Response(serializer.data,status=status.HTTP_200_OK)
