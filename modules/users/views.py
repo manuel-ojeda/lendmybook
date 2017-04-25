@@ -47,6 +47,7 @@ def userlogin(request):
 
 				LogIn(
 					request,
+					email = user_register.cleaned_data['email'],
 					id_facebook = user_register.cleaned_data['id_facebook'],
 				)
 

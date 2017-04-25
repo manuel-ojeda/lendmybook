@@ -35,7 +35,6 @@ LOCAL_APPS = [
     'modules.books_preferences',
     'modules.user_preferences',
     'modules.landing',
-
 ]
 
 THIRD_PARTY_APPS = [
